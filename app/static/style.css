@@ -1,0 +1,31 @@
+html,body{
+    padding: 0%;
+    margin: 0%;
+}
+
+#cuadro{
+    border-color: #282828;
+    border-style: solid ;
+    width: 300px;
+    background-color: #42055B;
+    color: white;
+}
+
+form{
+    margin: 5%;
+}
+
+.button{
+    background-color: #0084FF;
+    border-radius: 5%;
+    border: none;
+    width: 80px;
+    height: 20px;
+    color: white;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: gold;
+}

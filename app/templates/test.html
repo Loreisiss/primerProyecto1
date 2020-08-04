@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prueba 1</title>
+    <link rel="stylesheet" href="{% static 'test.css'%}">
+</head>
+<body>
+    <center>
+
+        <div class="acordeon">
+            <div style="height: 100px" class="casilla">
+                <p>Puntos: <span id="puntos">0</span></p>
+            </div>
+            <div style="height: 100px" class="casilla">
+                <p>#<span id="nivel">1</span></p>
+            </div>
+        </div>
+
+
+        <div class="acordeon">
+            <div id="azul" class="casilla">
+                <img id="img1" class="imagen" src="{% static '1test.png' %}">
+            </div>
+            <div id="verde" class="casilla">
+                <img id="img2" class="imagen"  src="{% static '2test.png' %}">
+            </div>
+            <div id="rojo" class="casilla">
+                <img id="img3" class="imagen"  src="{% static '3test.png' %}">
+            </div>
+            <div id="amarillo" class="casilla">
+                <img id="img5" class="imagen"  src="{% static '4test.png' %}">
+            </div>
+        </div>
+
+        <div class="acordeon">
+            <div style="width: 120px" class="casilla">
+                <button id="anterior">Anterior</button>
+            </div>
+            
+            <div class="casilla" >
+                <p class="opcion">A</p>
+            </div>
+            <div class="casilla">
+                <p class="opcion">B</p>
+            </div>
+            <div class="casilla">
+                <p class="opcion">C</p>
+            </div >
+            <div class="casilla">
+                <p class="opcion">D</p>
+            </div>
+            <div class="casilla">
+                <button id="siguiente">Siguiente</button>
+            </div>
+        </div>
+        <br>
+        <div class="acordeon">
+            <div style=" width: 70%; height: 80px;" class="casilla">
+                <p id="mensaje"></p>
+            </div>
+            <div style=" width: 30%; height: 80px;" class="casilla">
+                <img id="img4" style="margin-top: 15px; visibility: hidden;" >
+            </div>
+        </div>
+        
+    
+    </center>
+    
+
+    
+    <script src ="{% static 'jquery-3.5.0.min.js' %}">
+    </script>
+    
+    <script src="{% static 'test1.js' %}">
+    </script>
+
+
+</body>
+</html>

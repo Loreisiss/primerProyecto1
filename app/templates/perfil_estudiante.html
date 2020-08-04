@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfil del estudiante</title>
+    <meta http-equiv="refresh" content="3">
+    <link rel="stylesheet" href="{% static 'perfil_estudiante.css'   %}">
+</head>
+<body>
+    
+    <div class="matriz">
+        <div id = "datos" class="casilla">
+            <center>
+            <p>Estudiante: {{persona.Nombre_y_apellido}}</p>
+            
+            <p>Promedio: {{persona.Promedio}}</p>
+            
+            <p>Carrera: {{persona.Carrera}}</p>
+            
+            <p>Cedula: {{persona.cedula}} </p>
+            
+            <p>Genero: {{persona.sexo}} </p>
+            
+            <p>Semestres cursados: {{persona.Semestres_cursados}}</p> 
+            
+            </center>
+        </div>
+    
+        <div id="evaluaciones" class="casilla">
+            <center>
+            {% if examen1_realizado %}
+            <a href="{% url 'test1' %}"><input type="button" class="button " value="Examen 1"></a><br>
+            {% endif %}
+            {% if examen2_realizado %}
+            <input type="button" class="button " value="Examen 2"><br>
+            {% endif %}
+            {% if examen3_realizado %}
+            <input type="button" class="button " value="Examen 3"><br>
+            {% endif %}
+            <p class="info">Nota 1er examen: <span>{{ persona.nota_examen1 }}</span></p><br>
+            <p class="info">Tiempo en realizar examen 1 (minutos): <span>{{ persona.tiempo_examen1 }}</span></p><br>
+            <p class="info">Nota 2do examen: <span>{{ persona.nota_examen2 }}</span></p><br>
+            <p class="info">Tiempo en realizar examen 2 (minutos): <span>{{ persona.tiempo_examen2 }}</span></p><br>
+            <p class="info">Nota 3er examen: <span>{{ persona.nota_examen3 }}</span></p><br>
+            <p class="info">Tiempo en realizar examen 3 (minutos): <span>{{ persona.tiempo_examen3 }}</span></p><br>
+            </center>
+            
+        </div>
+    </div>
+    
+    
+</html>

@@ -1,0 +1,68 @@
+html,body{
+    margin:0%;
+    padding: 0px;
+    background-color: #44B78B;
+}
+
+#datos,#evaluaciones{
+    margin: 2.5%;
+    width: 100%;
+    
+    background-color: #0084FF;
+    color: #FBD735;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px #282828;
+}
+
+#datos{
+    height: 60vh;
+}
+#evaluaciones{
+    height: 80vh;
+}
+
+.button{
+    background-color: #FBD735;
+    text-align: center;
+    border-radius: 5%;
+    font-size: 15px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    color: #006FA2;
+    margin: 2.5%;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgb(211, 181, 51);
+}
+.matriz{
+
+    margin-top: 0.75%;
+    display: flex;            
+    /*display: grid;
+    grid-template-columns: auto auto ;
+    */
+    width: 100%;
+    /*
+    border-color: white;
+    border-style: solid;*/
+}
+
+.casilla{
+
+    color: aliceblue;
+    font-size: 25px;
+    text-align: center;
+    width: 50%;
+    /*
+    border-color: white;
+    border-style: solid;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    height: 60px;
+}
+
+.info{
+    font-size: 20px;
+    margin: 0px;
+}

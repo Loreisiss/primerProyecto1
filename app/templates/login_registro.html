@@ -1,0 +1,171 @@
+{% load admin_urls %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login_registro.css'  %}">
+    <title>Pagina Principal</title>
+</head>
+<body>
+    <center>
+
+        <div id="Cuadro_Principal">
+            
+                <div class="matriz">
+                    <div class="casilla select">
+                        <input id="login_boton" type="button" class="button " value="Login">
+                    </div>
+                    <div class="casilla select">
+                        <a href="{% url 'admin:login' %}"><input type="button" class="button " value="Admin"></a>
+                    </div>
+                    <div class="casilla select">
+                        <input id="registro_boton" type="button" class="button " value="Registro">
+                    </div>
+                </div>
+                
+            <div id="login">
+                <form action = "/login/" method="GET" >
+                      
+                        <div id="login1" >
+                            <label for="Cedula">Cédula</label><br>
+                            <input type="text" name="Cedula">
+                        </div>
+                        
+                        <div id="login2">
+                            <label  for="pwd">Contraseña</label><br>
+                            <input type="password"  name="pwd" >
+                        </div>
+            
+                        <input type="submit" class="button" value="Ingresar">
+                    
+                </form>
+            </div>
+
+
+            <div id="seleccionar_registro">
+                <br>
+                <input id="reg_prof" class="button" type="button" value="Registar profesor">
+                <br>
+                <input id="reg_est" class="button" type="button" value="Registar estudiante">
+            </div>
+
+            <div id="registro_estudiante">
+                <form action="/registro_estudiante/" method="POST">
+                    {% csrf_token %}
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label><br>
+                        <input  type="text" name = 'nombre' >
+                    </div>
+                    
+                    <div class="campo">
+                    <label for="apellido">Apellido:</label><br>
+                    <input  type="text" name = "apellido" >
+                    </div>
+
+                    <div class="campo">
+                        <label for="genero">Género:</label><br>
+                        <h4>Masculino<input  type="radio" value="M" name = "genero" >
+                            Femenino<input  type="radio" value="F" name = "genero" ></h4>
+                
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="correo">Correo:</label><br>
+                        <input  type="text" name = "correo" >
+                    </div>
+
+                    <div class="campo">
+                        <label for="cedula">Cédula:</label><br>
+                        <input  type="text" name = "cedula" >
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="carrera">Carrera:</label><br>
+                        <select name="carrera">
+                            <option>Computación</option>
+                            <option>Matematica</option>
+                            <option>Física</option>
+                            <option>Química</option>
+                            <option>Geografía</option>
+                            <option>Filosofía</option>
+                            <option>Psicología</option>
+                            <option>Biología</option>
+                            <option>Ingeniería eléctica</option>
+                            <option>Ingeniería geológica</option>
+                        </select>
+       
+                    </div>
+
+                    <div class="campo">
+                        <label for="password">Contraseña:</label><br>
+                        <input type="password" name="password" > 
+                    </div>
+                    <input class="button"  style="width : 250px;" type="submit" value="Registrar estudiante">
+                </form>
+            </div>
+            
+            <div id="registro_profesor">
+                <form action="/registro_profesor/" method="POST">
+                    {% csrf_token %}
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label><br>
+                        <input  type="text" name = "nombre" >
+                    </div>
+                    
+                    <div class="campo">
+                    <label for="apellido">Apellido:</label><br>
+                    <input  type="text" name = "apellido" >
+                    </div>
+
+                    <div class="campo">
+                        <label for="genero">Género:</label><br>
+                        <h4>Masculino<input  type="radio" value="M" name = "genero" >
+                            Femenino<input  type="radio" value="F" name = "genero" ></h4>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="correo">Correo:</label><br>
+                        <input  type="text" name = "correo" >
+                    </div>
+
+                    <div class="campo">
+                        <label for="cedula">Cédula:</label><br>
+                        <input  type="text" name = "cedula" >
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="asignatura">Asignatura:</label><br>
+                        <select name="asignatura">
+                            <option>Programación</option>
+                            <option>Matematica 1</option>
+                            <option>Física 2</option>
+                            <option>Química 2</option>
+                            <option>Geografía</option>
+                            <option>Filosofía</option>
+                            <option>Psicología</option>
+                            <option>Biología</option>
+                            <option>Tópicos de economía 1</option>
+                            <option>Suelos y minerales</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="password">Contraseña:</label><br>
+                        <input type="password" name="password" > 
+                    </div>
+                    
+
+                    <input class="button"  style="width : 250px;" type="submit" value="Registrar profesor">
+
+                </form>
+            </div>
+        </div>
+
+    </center>
+    
+    <script src="{% static 'login_registro.js' %}"> </script>
+
+</body>
+</html>

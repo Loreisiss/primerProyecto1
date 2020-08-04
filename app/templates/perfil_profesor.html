@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfil del profesor</title>
+    <link rel="stylesheet" href="{% static 'perfil_profesor.css' %}">
+</head>
+<body>
+    
+    <div class="matriz">
+        <div id = "datos" class="casilla">
+            <center>
+            <p>Profesor: {{persona.Nombre_y_apellido}}</p>
+            <p>Años de experiencia: {{persona.tiempo_exp}}</p>
+            <p>Asignatura: {{persona.Asignatura}}</p>
+            <p>Cédula: {{persona.cedula}} </p>
+            <p>Correo: {{persona.correo}} </p>
+            <p>Género: {{persona.sexo}} </p>
+            </center>
+        </div>
+    </div>
+</html>
+
